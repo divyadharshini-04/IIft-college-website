@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIFT - Indian Institute of Fashion Technology</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+  <div class="topbar">
+    <div>Email: info@iift.edu.in</div>
+    <div>Call: +91 98765 43210</div>
+</div>
+   
+
+  <nav class="navbar">
+
+        <div class="logo">
+    <img src="logo.png" alt="IIFT Logo" class="logo-img" />
+    <div class="logo-text">
+        <h2>IIFT</h2>
+        <span>Indian Institute of Fashion Technology</span>
+    </div>
+</div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="course.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="placements.html">Placements</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="admission.html" class="btn">Apply Now</a>
+    </div>
+
+</nav>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f9fc;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .topbar {
+      background: #7a0019;
+      color: #fff;
+      padding: 8px 40px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .navbar {
+      background: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      color: #222;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #7a0019;
+    }
+
+    .btn {
+      background: #7a0019;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #a30022;
+    }
+
+    .hero {
+      min-height: 85vh;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('[images.unsplash.com](https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1400&q=80)') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+      color: #fff;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      padding: 70px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      color: #7a0019;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .about-grid,
+    .course-grid,
+    .stats-grid,
+    .news-grid,
+    .footer-grid {
+      display: grid;
+      gap: 25px;
+    }
+
+    .about-grid {
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .course-grid {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #7a0019;
+    }
+
+    .stats {
+      background: #7a0019;
+      color: #fff;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      text-align: center;
+    }
+
+    .stat-box h2 {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    .news-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .news-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .news-card h4 {
+      color: #7a0019;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #f1e9eb;
+      border-radius: 14px;
+      padding: 50px 20px;
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #ddd;
+      padding: 55px 60px 25px;
+    }
+
+    .footer-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-bottom: 30px;
+    }
+
+    footer h3, footer h4 {
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 18px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar,
+      .navbar,
+      .hero,
+      .section,
+      footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f9fc;
+    color:#333;
+    line-height:1.7;
+}
+
+/* TOPBAR */
+
+.topbar{
+    background:#7a0019;
+    color:white;
+    padding:10px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#7a0019;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    color:#666;
+    font-weight:400;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#7a0019;
+}
+
+.btn{
+    background:#7a0019;
+    color:white !important;
+    padding:10px 22px;
+    border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:65vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.hero{
+  min-height:85vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:0 60px;
+  color:#fff;
+}
+/* SECTIONS */
+
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:#7a0019;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.section-title::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:#7a0019;
+    margin:10px auto;
+    border-radius:10px;
+}
+
+.section-subtitle{
+    max-width:900px;
+    text-align:center;
+    margin:auto;
+    color:#666;
+    margin-bottom:40px;
+}
+
+/* GRID */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(122,0,25,.15);
+}
+
+.card h3{
+    color:#7a0019;
+    margin-bottom:15px;
+}
+
+/* CTA */
+
+.cta{
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* FORM */
+
+.application-form{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.application-form input,
+.application-form textarea,
+.application-form select{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.application-form button{
+    width:100%;
+    background:#7a0019;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f1f1f;
+    color:#ddd;
+    padding:70px 8% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-grid h3,
+.footer-grid h4{
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer-grid ul{
+    list-style:none;
+}
+
+.footer-grid li{
+    margin-bottom:10px;
+}
+
+.footer-grid a{
+    color:#ccc;
+    text-decoration:none;
+}
+
+.footer-grid a:hover{
+    color:white;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid #444;
+    padding-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        gap:5px;
+        text-align:center;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+</style>
+</head>
+<body>
+
+  
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Shaping the Future of Fashion Education</h1>
+      <p>IIFT empowers creative minds with world-class education in fashion design, technology, innovation, and industry-driven learning.</p>
+      <a href="#" class="btn">Explore Programs</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">About IIFT</h2>
+    <p class="section-subtitle">A premier destination for students aspiring to excel in fashion design, apparel technology, textile innovation, and creative leadership.</p>
+    <div class="about-grid">
+      <div>
+        <h3 style="color:#7a0019; margin-bottom:15px;">Redefining Fashion Education</h3>
+        <p style="margin-bottom:15px;">At IIFT, we blend creativity, craftsmanship, and technology to prepare students for the evolving global fashion industry. Our programs focus on design thinking, practical exposure, sustainability, and entrepreneurship.</p>
+        <p>With expert faculty, modern labs, industry partnerships, and innovation-led learning, we nurture the next generation of fashion professionals.</p>
+      </div>
+      <div class="about-img">
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80)" alt="Fashion students">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff;">
+    <h2 class="section-title">Programs Offered</h2>
+    <p class="section-subtitle">Industry-oriented academic programs designed to build creative, technical, and managerial capabilities.</p>
+    <div class="course-grid">
+      <div class="card">
+        <h3>Fashion Design</h3>
+        <p>Comprehensive training in design fundamentals, garment construction, trend research, and collection development.</p>
+      </div>
+      <div class="card">
+        <h3>Apparel Production</h3>
+        <p>Learn manufacturing systems, quality control, merchandising, and production planning for the apparel sector.</p>
+      </div>
+      <div class="card">
+        <h3>Textile Design</h3>
+        <p>Develop expertise in fabric innovation, print development, surface ornamentation, and textile applications.</p>
+      </div>
+      <div class="card">
+        <h3>Fashion Communication</h3>
+        <p>Build skills in branding, styling, digital media, visual communication, and fashion marketing strategy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stats">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <h2>25+</h2>
+        <p>Years of Excellence</p>
+      </div>
+      <div class="stat-box">
+        <h2>50+</h2>
+        <p>Industry Mentors</p>
+      </div>
+      <div class="stat-box">
+        <h2>5000+</h2>
+        <p>Successful Alumni</p>
+      </div>
+      <div class="stat-box">
+        <h2>100+</h2>
+        <p>Recruiting Partners</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Latest News & Events</h2>
+    <p class="section-subtitle">Stay updated with admissions, workshops, exhibitions, seminars, and student showcases.</p>
+    <div class="news-grid">
+      <div class="card news-card">
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80)" alt="Event">
+        <h4>Annual Fashion Showcase 2026</h4>
+        <p>Experience the creativity and craftsmanship of our graduating students through innovative runway collections.</p>
+      </div>
+      <div class="card news-card">
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80)" alt="Workshop">
+        <h4>Industry Workshop Series</h4>
+        <p>Experts from top fashion houses and brands share insights on emerging trends, retail innovation, and sustainability.</p>
+      </div>
+      <div class="card news-card">
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80)" alt="Admissions">
+        <h4>Admissions Open</h4>
+        <p>Applications are now invited for diploma, undergraduate, and advanced programs in fashion and design disciplines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta">
+      <h2 style="font-size:34px; color:#7a0019; margin-bottom:15px;">Begin Your Fashion Journey</h2>
+      <p style="max-width:700px; margin:0 auto 25px; color:#444;">Join IIFT and unlock opportunities in design, technology, innovation, entrepreneurship, and the global fashion industry.</p>
+      <a href="#" class="btn">Apply for Admission</a>
+    </div>
+  </section>
+
+  <footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>IIFT</h3>
+
+            <p>
+                Indian Institute of Fashion Technology is committed to
+                providing world-class fashion education and empowering
+                students with creativity, innovation and industry-ready skills.
+            </p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="placements.html">Placements</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Student Corner</h4>
+
+            <ul>
+                <li><a href="#">Academic Calendar</a></li>
+                <li><a href="#">Examinations</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Scholarships</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+
+            <p>IIFT Campus, New Delhi, India</p>
+            <p>Email: info@iift.edu.in</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Office Hours: 9:00 AM - 5:00 PM</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 IIFT - Indian Institute of Fashion Technology.
+        All Rights Reserved.
+    </div>
+
+</footer>
+
+</body>
+</html>

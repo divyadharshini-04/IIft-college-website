@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIFT - Indian Institute of Fashion Technology</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    
+    <div class="topbar">
+    <div>Email: info@iift.edu.in</div>
+    <div>Call: +91 98765 43210</div>
+</div>
+
+  <nav class="navbar">
+
+        <div class="logo">
+    <img src="logo.png" alt="IIFT Logo" class="logo-img" />
+    <div class="logo-text">
+        <h2>IIFT</h2>
+        <span>Indian Institute of Fashion Technology</span>
+    </div>
+</div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="course.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="placements.html">Placements</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="admission.html" class="btn">Apply Now</a>
+    </div>
+
+</nav>
+    <style>
+        
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+body{
+    background:#f8f9fc;
+    color:#333;
+    line-height:1.7;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#7a0019;
+    color:#fff;
+    padding:10px 8%;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#fff;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#7a0019;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    color:#666;
+    font-weight:400;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#7a0019;
+}
+
+.btn{
+    background:#7a0019;
+    color:#fff !important;
+    padding:10px 20px;
+    border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:70vh;
+    background:
+    linear-gradient(rgba(122,0,25,.75),
+    rgba(122,0,25,.75)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#7a0019;
+    margin-bottom:20px;
+}
+
+.section-title::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:#7a0019;
+    margin:10px auto;
+    border-radius:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    margin-bottom:40px;
+    color:#666;
+}
+
+/* GRID */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(122,0,25,.15);
+}
+
+.card h3{
+    color:#7a0019;
+    margin-bottom:15px;
+}
+
+/* ALUMNI */
+
+.alumni-card{
+    text-align:center;
+}
+
+.alumni-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:0 auto 20px;
+    border:4px solid #7a0019;
+}
+
+.alumni-card p{
+    margin-top:10px;
+}
+
+/* FORM */
+
+.application-form{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.application-form input,
+.application-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.application-form input:focus,
+.application-form textarea:focus{
+    outline:none;
+    border-color:#7a0019;
+}
+
+.application-form button{
+    width:100%;
+    background:#7a0019;
+    color:white;
+    border:none;
+    padding:16px;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.application-form button:hover{
+    background:#990021;
+}
+
+/* CTA */
+
+.cta{
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.cta h2{
+    font-size:36px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f1f1f;
+    color:#ddd;
+    padding:70px 8% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-grid h3,
+.footer-grid h4{
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer-grid ul{
+    list-style:none;
+}
+
+.footer-grid li{
+    margin-bottom:10px;
+}
+
+.footer-grid a{
+    color:#ccc;
+    text-decoration:none;
+}
+
+.footer-grid a:hover{
+    color:white;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid #444;
+    padding-top:20px;
+    color:#aaa;
+}
+
+/* ANIMATION */
+
+.card,
+.alumni-card,
+.application-form,
+.cta{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        text-align:center;
+        gap:5px;
+    }
+}
+.recruiter-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.recruiter-card{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.recruiter-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(122,0,25,.15);
+}
+
+.recruiter-card img{
+    width:120px;
+    height:70px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.recruiter-card h3{
+    color:#7a0019;
+}
+.career-card{
+    overflow:hidden;
+    padding:0;
+}
+
+.career-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.career-card h3{
+    padding:20px 25px 10px;
+    color:#7a0019;
+}
+
+.career-card p{
+    padding:0 25px 25px;
+}
+.process-section{
+    background:#fff;
+}
+
+.roadmap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-top:60px;
+    gap:10px;
+}
+
+.roadmap-step{
+    width:180px;
+    text-align:center;
+}
+
+.step-circle{
+    width:70px;
+    height:70px;
+    margin:auto;
+    border-radius:50%;
+    background:#7a0019;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 20px rgba(122,0,25,.25);
+}
+
+.roadmap-step h3{
+    margin-top:20px;
+    color:#7a0019;
+    font-size:18px;
+}
+
+.roadmap-step p{
+    font-size:14px;
+    color:#666;
+    margin-top:10px;
+}
+
+.roadmap-line{
+    width:80px;
+    height:4px;
+    background:#7a0019;
+    border-radius:10px;
+}
+
+@media(max-width:900px){
+
+    .roadmap{
+        flex-direction:column;
+    }
+
+    .roadmap-line{
+        width:4px;
+        height:60px;
+    }
+}
+.highlights{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:60px;
+    background:linear-gradient(135deg,#7a0019,#a40028);
+    border-radius:25px;
+    color:white;
+    text-align:center;
+}
+
+.highlight-box h2{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.highlight-box{
+    flex:1;
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f9fc;
+    color:#333;
+    line-height:1.7;
+}
+
+/* TOPBAR */
+
+.topbar{
+    background:#7a0019;
+    color:white;
+    padding:10px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#7a0019;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    color:#666;
+    font-weight:400;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#7a0019;
+}
+
+.btn{
+    background:#7a0019;
+    color:white !important;
+    padding:10px 22px;
+    border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:65vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.hero{
+    min-height:70vh;
+    background:
+    linear-gradient(rgba(122,0,25,.75), rgba(122,0,25,.75)),
+    url("https://images.unsplash.com/photo-1521334884684-d80222895322?w=1600");
+    
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+/* SECTIONS */
+
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:#7a0019;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.section-title::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:#7a0019;
+    margin:10px auto;
+    border-radius:10px;
+}
+
+.section-subtitle{
+    max-width:900px;
+    text-align:center;
+    margin:auto;
+    color:#666;
+    margin-bottom:40px;
+}
+
+/* GRID */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(122,0,25,.15);
+}
+
+.card h3{
+    color:#7a0019;
+    margin-bottom:15px;
+}
+
+/* CTA */
+
+.cta{
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* FORM */
+
+.application-form{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.application-form input,
+.application-form textarea,
+.application-form select{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.application-form button{
+    width:100%;
+    background:#7a0019;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f1f1f;
+    color:#ddd;
+    padding:70px 8% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-grid h3,
+.footer-grid h4{
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer-grid ul{
+    list-style:none;
+}
+
+.footer-grid li{
+    margin-bottom:10px;
+}
+
+.footer-grid a{
+    color:#ccc;
+    text-decoration:none;
+}
+
+.footer-grid a:hover{
+    color:white;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid #444;
+    padding-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        gap:5px;
+        text-align:center;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+</style>
+    <!-- HERO SECTION -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Placements & Career Development</h1>
+        <p>
+            At IIFT, we believe that education is successful only when it
+            leads to meaningful career opportunities. Our dedicated Placement
+            and Career Development Cell works closely with students and
+            industry partners to ensure every graduate is prepared for the
+            professional world.
+        </p>
+    </div>
+</section>
+
+<!-- OVERVIEW -->
+
+<section class="section">
+    <h2 class="section-title">Placement Overview</h2>
+
+    <p class="section-subtitle">
+        The Placement Cell at the Indian Institute of Fashion Technology
+        bridges the gap between academic learning and industry expectations.
+        Through training programs, internships, workshops, portfolio
+        development sessions, mock interviews and recruitment drives, we
+        prepare students to excel in the competitive fashion and lifestyle
+        industry.
+    </p>
+
+    <p style="text-align:center; max-width:1000px; margin:auto;">
+        Over the years, IIFT has built strong relationships with leading
+        fashion brands, textile companies, retail organizations, design
+        houses and creative agencies. Our graduates have successfully
+        secured positions in design, merchandising, marketing, branding,
+        production management and entrepreneurship.
+    </p>
+</section>
+
+<!-- STATS -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Placement Highlights 2026</h2>
+
+    <section class="highlights">
+
+    <div class="highlight-box">
+        <h2>95%</h2>
+        <p>Placement Assistance</p>
+    </div>
+
+    <div class="highlight-box">
+        <h2>100+</h2>
+        <p>Recruiters</p>
+    </div>
+
+    <div class="highlight-box">
+        <h2>5000+</h2>
+        <p>Alumni</p>
+    </div>
+
+    <div class="highlight-box">
+        <h2>₹8 LPA</h2>
+        <p>Highest Package</p>
+    </div>
+
+</section>
+</section>
+
+<!-- TRAINING -->
+
+<section class="section">
+    <h2 class="section-title">Career Development & Training</h2>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Communication Skills</h3>
+            <p>
+                Students undergo communication and personality development
+                programs to improve professional interaction skills.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Portfolio Development</h3>
+            <p>
+                Guidance is provided to create industry-ready portfolios
+                showcasing creativity and technical expertise.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Mock Interviews</h3>
+            <p>
+                Industry experts conduct mock interviews to prepare students
+                for recruitment processes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Resume Building</h3>
+            <p>
+                Professional resume writing workshops help students present
+                themselves effectively.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- RECRUITERS -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Top Recruiters</h2>
+
+    <p class="section-subtitle">
+        Leading national and international brands recruit our students every year.
+    </p>
+
+    <div class="recruiter-grid">
+
+        <div class="recruiter-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg" alt="H&M">
+            <h3>H&M</h3>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara">
+            <h3>Zara</h3>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Pantaloons_logo.svg" alt="Pantaloons">
+            <h3>Pantaloons</h3>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Lifestyle_Stores_logo.png" alt="Lifestyle">
+            <h3>Lifestyle</h3>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Levi%27s_logo.svg" alt="Levi's">
+            <h3>Levi's</h3>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Fabindia_logo.png" alt="Fabindia">
+            <h3>Fabindia</h3>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/42/Reliance_Trends_logo.png" alt="Reliance Trends">
+            <h3>Reliance Trends</h3>
+        </div>
+
+        <div class="recruiter-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/59/Aditya_Birla_Fashion_and_Retail_Logo.png" alt="ABFRL">
+            <h3>ABFRL</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- INTERNSHIPS -->
+
+<section class="section">
+    <h2 class="section-title">Internship Opportunities</h2>
+
+    <p class="section-subtitle">
+        Internships play a vital role in transforming classroom knowledge
+        into practical experience.
+    </p>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Fashion Design Internships</h3>
+            <p>
+                Students work directly with designers and fashion houses on
+                real-world projects.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Textile Industry Training</h3>
+            <p>
+                Exposure to textile production units, manufacturing processes
+                and quality control systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Fashion Marketing</h3>
+            <p>
+                Gain experience in branding, advertising, retail management
+                and digital marketing.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CAREER ROLES -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Career Opportunities</h2>
+
+    <div class="course-grid">
+
+        <div class="card career-card">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800" alt="Fashion Designer">
+            <h3>Fashion Designer</h3>
+            <p>Create innovative fashion collections and apparel designs.</p>
+        </div>
+
+        <div class="card career-card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800" alt="Textile Designer">
+            <h3>Textile Designer</h3>
+            <p>Develop fabrics, prints and textile innovations.</p>
+        </div>
+
+        <div class="card career-card">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800" alt="Fashion Stylist">
+            <h3>Fashion Stylist</h3>
+            <p>Work with brands, celebrities and media organizations.</p>
+        </div>
+
+        <div class="card career-card">
+            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800" alt="Fashion Merchandiser">
+            <h3>Fashion Merchandiser</h3>
+            <p>Manage sourcing, retail planning and product strategies.</p>
+        </div>
+
+        <div class="card career-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="Fashion Communicator">
+            <h3>Fashion Communicator</h3>
+            <p>Build careers in branding, media and fashion journalism.</p>
+        </div>
+
+        <div class="card career-card">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" alt="Entrepreneur">
+            <h3>Entrepreneur</h3>
+            <p>Launch independent fashion labels and creative ventures.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PLACEMENT PROCESS -->
+
+<section class="section process-section">
+
+    <h2 class="section-title">Placement Process</h2>
+
+    <p class="section-subtitle">
+        Our structured placement process ensures that every student receives
+        comprehensive career support from registration to final placement.
+    </p>
+
+    <div class="roadmap">
+
+        <div class="roadmap-step">
+            <div class="step-circle">1</div>
+            <h3>Registration</h3>
+            <p>Students register with the Placement Cell.</p>
+        </div>
+
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-step">
+            <div class="step-circle">2</div>
+            <h3>Resume & Portfolio</h3>
+            <p>Professional review and portfolio evaluation.</p>
+        </div>
+
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-step">
+            <div class="step-circle">3</div>
+            <h3>Training</h3>
+            <p>Mock interviews, aptitude and soft-skill sessions.</p>
+        </div>
+
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-step">
+            <div class="step-circle">4</div>
+            <h3>Recruitment Drive</h3>
+            <p>Companies visit campus for hiring.</p>
+        </div>
+
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-step">
+            <div class="step-circle">5</div>
+            <h3>Selection</h3>
+            <p>Students receive offer letters and placement support.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ALUMNI SUCCESS -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Alumni Success Stories</h2>
+
+    <div class="course-grid">
+
+        <div class="card alumni-card">
+
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500"
+                 alt="Priya Sharma">
+
+            <h3>Priya Sharma</h3>
+
+            <p>
+                Graduated from Fashion Design and currently works as a
+                Designer at Zara India.
+            </p>
+
+        </div>
+
+        <div class="card alumni-card">
+
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500"
+                 alt="Rahul Verma">
+
+            <h3>Rahul Verma</h3>
+
+            <p>
+                Textile Design graduate working with a leading export house.
+            </p>
+
+        </div>
+
+        <div class="card alumni-card">
+
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500"
+                 alt="Ananya Gupta">
+
+            <h3>Ananya Gupta</h3>
+
+            <p>
+                Fashion Communication graduate employed in a global branding agency.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- REGISTRATION FORM -->
+
+<section class="section">
+    <h2 class="section-title">Placement Registration</h2>
+
+    <form class="application-form">
+
+        <input type="text" placeholder="Student Name" required>
+
+        <input type="email" placeholder="Email Address" required>
+
+        <input type="tel" placeholder="Phone Number" required>
+
+        <input type="text" placeholder="Course Name" required>
+
+        <textarea rows="5"
+        placeholder="Career Goals"></textarea>
+
+        <button type="submit">
+            Register for Placement Assistance
+        </button>
+
+    </form>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" style="background:#fff;">
+    <div class="cta">
+
+        <h2 style="color:#7a0019;margin-bottom:15px;">
+            Contact Placement Cell
+        </h2>
+
+        <p style="margin-bottom:20px;">
+            Our Placement and Career Development Team is available to guide
+            students throughout their professional journey.
+        </p>
+
+        <p>
+            📧 placements@iift.edu.in<br>
+            📞 +91 98765 43210<br>
+            📍 IIFT Campus, New Delhi, India
+        </p>
+
+    </div>
+</section>
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>IIFT</h3>
+
+            <p>
+                Indian Institute of Fashion Technology is committed to
+                providing world-class fashion education and empowering
+                students with creativity, innovation and industry-ready skills.
+            </p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="placements.html">Placements</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Student Corner</h4>
+
+            <ul>
+                <li><a href="#">Academic Calendar</a></li>
+                <li><a href="#">Examinations</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Scholarships</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+
+            <p>IIFT Campus, New Delhi, India</p>
+            <p>Email: info@iift.edu.in</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Office Hours: 9:00 AM - 5:00 PM</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 IIFT - Indian Institute of Fashion Technology.
+        All Rights Reserved.
+    </div>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

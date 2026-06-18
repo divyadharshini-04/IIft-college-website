@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIFT - Indian Institute of Fashion Technology</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+<html>
+<head>
+    <!-- Same CSS from Home Page -->
+</head>
+<body>
+<div class="topbar">
+    <div>Email: info@iift.edu.in</div>
+    <div>Call: +91 98765 43210</div>
+</div>
+    <!-- TOP BAR -->
+      
+  <nav class="navbar">
+        <div class="logo">
+    <img src="logo.png" alt="IIFT Logo" class="logo-img" />
+    <div class="logo-text">
+        <h2>IIFT</h2>
+        <span>Indian Institute of Fashion Technology</span>
+    </div>
+</div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="course.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="placements.html">Placements</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="admission.html" class="btn">Apply Now</a>
+    </div>
+
+</nav>
+    <style>
+    
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f8fc;
+    color:#333;
+    line-height:1.8;
+}
+
+/* TOPBAR */
+
+.topbar{
+    background:#7a0019;
+    color:#fff;
+    padding:8px 40px;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:white;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#7a0019;
+}
+
+.btn{
+    background:#7a0019;
+    color:white !important;
+    padding:10px 20px;
+    border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:65vh;
+    background:
+    linear-gradient(rgba(122,0,25,.75),
+    rgba(122,0,25,.75)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:65px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* SECTION */
+
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#7a0019;
+    margin-bottom:20px;
+}
+
+.section-title::after{
+    content:'';
+    width:90px;
+    height:4px;
+    background:#7a0019;
+    display:block;
+    margin:12px auto;
+    border-radius:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+    color:#666;
+    margin-bottom:50px;
+}
+
+/* GRID */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* CARDS */
+
+.card,
+.course-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover,
+.course-card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3,
+.course-card h3{
+    color:#7a0019;
+    margin-bottom:15px;
+}
+
+.course-card ul{
+    padding-left:20px;
+}
+
+.course-card li{
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.fee-table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.fee-table th{
+    background:#7a0019;
+    color:white;
+}
+
+.fee-table th,
+.fee-table td{
+    padding:18px;
+    border:1px solid #eee;
+    text-align:center;
+}
+
+.fee-table tr:hover{
+    background:#faf4f6;
+}
+
+/* FORM */
+
+.application-form{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus{
+    outline:none;
+    border-color:#7a0019;
+}
+
+.application-form button{
+    width:100%;
+    background:#7a0019;
+    color:white;
+    border:none;
+    padding:16px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.application-form button:hover{
+    background:#990021;
+}
+
+/* CTA */
+
+.cta{
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f1f1f;
+    color:#ccc;
+    padding:70px 8% 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:35px;
+}
+
+.footer-grid h3,
+.footer-grid h4{
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer-grid ul{
+    list-style:none;
+}
+
+.footer-grid li{
+    margin-bottom:10px;
+}
+
+.footer-grid a{
+    color:#ccc;
+    text-decoration:none;
+}
+
+.footer-grid a:hover{
+    color:white;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid #444;
+    padding-top:20px;
+    color:#aaa;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .topbar{
+        flex-direction:column;
+        text-align:center;
+        gap:5px;
+        padding:10px 20px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .application-form{
+        padding:25px;
+    }
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f9fc;
+    color:#333;
+    line-height:1.7;
+}
+
+/* TOPBAR */
+
+.topbar{
+    background:#7a0019;
+    color:white;
+    padding:10px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#7a0019;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    color:#666;
+    font-weight:400;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#7a0019;
+}
+
+.btn{
+    background:#7a0019;
+    color:white !important;
+    padding:10px 22px;
+    border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:65vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:#7a0019;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.section-title::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:#7a0019;
+    margin:10px auto;
+    border-radius:10px;
+}
+
+.section-subtitle{
+    max-width:900px;
+    text-align:center;
+    margin:auto;
+    color:#666;
+    margin-bottom:40px;
+}
+
+/* GRID */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(122,0,25,.15);
+}
+
+.card h3{
+    color:#7a0019;
+    margin-bottom:15px;
+}
+
+/* CTA */
+
+.cta{
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* FORM */
+
+.application-form{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.application-form input,
+.application-form textarea,
+.application-form select{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.application-form button{
+    width:100%;
+    background:#7a0019;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f1f1f;
+    color:#ddd;
+    padding:70px 8% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-grid h3,
+.footer-grid h4{
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer-grid ul{
+    list-style:none;
+}
+
+.footer-grid li{
+    margin-bottom:10px;
+}
+
+.footer-grid a{
+    color:#ccc;
+    text-decoration:none;
+}
+
+.footer-grid a:hover{
+    color:white;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid #444;
+    padding-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        gap:5px;
+        text-align:center;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+</style>
+<!-- ADMISSIONS HERO -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Admissions 2026</h1>
+        <p>
+            Take the first step towards a successful career in fashion,
+            design and innovation.
+        </p>
+    </div>
+</section>
+
+<!-- OVERVIEW -->
+
+<section class="section">
+    <h2 class="section-title">Admission Process</h2>
+
+    <p class="section-subtitle">
+        Our admission process is designed to identify talented and
+        passionate students who aspire to build a successful career
+        in the fashion industry.
+    </p>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Step 1</h3>
+            <p>Choose your preferred program and submit an application.</p>
+        </div>
+
+        <div class="card">
+            <h3>Step 2</h3>
+            <p>Upload academic documents and personal details.</p>
+        </div>
+
+        <div class="card">
+            <h3>Step 3</h3>
+            <p>Attend counselling/interview if required.</p>
+        </div>
+
+        <div class="card">
+            <h3>Step 4</h3>
+            <p>Receive admission confirmation and pay fees.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ELIGIBILITY -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Eligibility Criteria</h2>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>Undergraduate Programs</h3>
+            <ul>
+                <li>10+2 from a recognized board</li>
+                <li>Minimum qualifying marks as prescribed</li>
+                <li>Passion for design and creativity</li>
+            </ul>
+        </div>
+
+        <div class="course-card">
+            <h3>Diploma Programs</h3>
+            <ul>
+                <li>10th or 12th Pass</li>
+                <li>No prior design experience required</li>
+                <li>Open to all streams</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- IMPORTANT DATES -->
+
+<section class="section">
+    <h2 class="section-title">Important Dates</h2>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Applications Open</h3>
+            <p>January 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Last Date to Apply</h3>
+            <p>June 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Admission Confirmation</h3>
+            <p>July 2026</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- DOCUMENTS -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Required Documents</h2>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Academic Certificates</h3>
+            <p>10th and 12th mark sheets.</p>
+        </div>
+
+        <div class="card">
+            <h3>ID Proof</h3>
+            <p>Aadhaar Card / Passport / Voter ID.</p>
+        </div>
+
+        <div class="card">
+            <h3>Passport Photo</h3>
+            <p>Recent passport-size photographs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Transfer Certificate</h3>
+            <p>Original TC during admission.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- APPLICATION FORM -->
+
+<section class="section">
+    <h2 class="section-title">Apply Online</h2>
+
+    <form class="application-form">
+
+        <input type="text" placeholder="Full Name" required>
+
+        <input type="email" placeholder="Email Address" required>
+
+        <input type="tel" placeholder="Phone Number" required>
+
+        <select required>
+            <option>Select Program</option>
+            <option>B.Sc Fashion Design</option>
+            <option>B.Sc Costume Design & Fashion</option>
+            <option>B.Sc Textile Design</option>
+            <option>B.Sc Fashion Communication</option>
+        </select>
+
+        <textarea
+            placeholder="Why do you want to join IIFT?"
+            rows="5"></textarea>
+
+        <button type="submit">
+            Submit Application
+        </button>
+
+    </form>
+</section>
+
+<!-- FAQ -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Is there an entrance exam?</h3>
+            <p>Some programs may require an interview or aptitude assessment.</p>
+        </div>
+
+        <div class="card">
+            <h3>Are scholarships available?</h3>
+            <p>Yes, scholarships are offered based on merit and eligibility.</p>
+        </div>
+
+        <div class="card">
+            <h3>Is hostel accommodation available?</h3>
+            <p>Yes, separate hostel facilities are available for students.</p>
+        </div>
+
+    </div>
+</section>
+<!-- WHY CHOOSE IIFT -->
+
+<section class="section">
+    <h2 class="section-title">Why Choose IIFT?</h2>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Industry-Oriented Curriculum</h3>
+            <p>
+                Our curriculum is regularly updated with the latest trends,
+                technologies, and practices in the fashion industry.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Experienced Faculty</h3>
+            <p>
+                Learn from industry professionals, researchers and experienced
+                academicians who bring real-world expertise into the classroom.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Modern Infrastructure</h3>
+            <p>
+                Access advanced design studios, textile laboratories,
+                computer-aided design facilities and innovation centers.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Placement Support</h3>
+            <p>
+                Dedicated career services help students secure internships
+                and placements with leading fashion brands.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SELECTION PROCESS -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Selection Process</h2>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Application Review</h3>
+            <p>
+                Applications are carefully reviewed based on academic
+                performance and eligibility requirements.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Personal Interview</h3>
+            <p>
+                Selected applicants may be invited for an interview to
+                assess creativity, communication and motivation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Admission Offer</h3>
+            <p>
+                Successful candidates receive admission offers via email.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FEE STRUCTURE -->
+
+<section class="section">
+    <h2 class="section-title">Fee Structure</h2>
+
+    <table class="fee-table">
+        <tr>
+            <th>Program</th>
+            <th>Duration</th>
+            <th>Annual Fee</th>
+        </tr>
+
+        <tr>
+            <td>B.Sc Fashion Design</td>
+            <td>3 Years</td>
+            <td>₹1,20,000</td>
+        </tr>
+
+        <tr>
+            <td>B.Sc Costume Design & Fashion</td>
+            <td>3 Years</td>
+            <td>₹1,15,000</td>
+        </tr>
+
+        <tr>
+            <td>B.Sc Textile Design</td>
+            <td>3 Years</td>
+            <td>₹1,10,000</td>
+        </tr>
+
+        <tr>
+            <td>B.Sc Fashion Communication</td>
+            <td>3 Years</td>
+            <td>₹1,20,000</td>
+        </tr>
+    </table>
+</section>
+
+<!-- SCHOLARSHIPS -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">Scholarships & Financial Assistance</h2>
+
+    <p class="section-subtitle">
+        IIFT supports talented students through various scholarship programs.
+    </p>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Merit Scholarship</h3>
+            <p>
+                Awarded to students with outstanding academic achievements.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Need-Based Assistance</h3>
+            <p>
+                Financial aid is available for deserving students from
+                economically weaker backgrounds.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Special Talent Scholarship</h3>
+            <p>
+                Offered to students with exceptional creative abilities
+                and design portfolios.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- HOSTEL -->
+
+<section class="section">
+    <h2 class="section-title">Hostel Facilities</h2>
+
+    <p class="section-subtitle">
+        Separate hostel facilities are available for boys and girls with
+        modern amenities and a safe learning environment.
+    </p>
+
+    <div class="course-grid">
+
+        <div class="card">
+            <h3>Comfortable Accommodation</h3>
+            <p>Well-furnished rooms with Wi-Fi access.</p>
+        </div>
+
+        <div class="card">
+            <h3>Dining Facilities</h3>
+            <p>Nutritious meals served daily in hygienic dining halls.</p>
+        </div>
+
+        <div class="card">
+            <h3>24/7 Security</h3>
+            <p>Safe and secure campus with continuous supervision.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- INTERNATIONAL STUDENTS -->
+
+<section class="section" style="background:#fff;">
+    <h2 class="section-title">International Admissions</h2>
+
+    <p class="section-subtitle">
+        International students are welcome to apply for all eligible
+        programs offered by the institute.
+    </p>
+
+    <div class="card">
+        <p>
+            Applicants from overseas must submit academic transcripts,
+            passport copies and relevant visa documents. Our admissions
+            office provides complete support throughout the application
+            process.
+        </p>
+    </div>
+</section>
+
+<!-- ADMISSION OFFICE -->
+
+<section class="section">
+    <div class="cta">
+        <h2 style="color:#7a0019;margin-bottom:15px;">
+            Need Admission Assistance?
+        </h2>
+        <p style="margin-bottom:20px;">
+            Contact our admissions team for personalized guidance and
+            support throughout the application process.
+        </p>
+
+        <p>
+            📧 admissions@iift.edu.in<br>
+            📞 +91 98765 43210
+        </p>
+    </div>
+</section>
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>IIFT</h3>
+
+            <p>
+                Indian Institute of Fashion Technology is committed to
+                providing world-class fashion education and empowering
+                students with creativity, innovation and industry-ready skills.
+            </p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="placements.html">Placements</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Student Corner</h4>
+
+            <ul>
+                <li><a href="#">Academic Calendar</a></li>
+                <li><a href="#">Examinations</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Scholarships</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+
+            <p>IIFT Campus, New Delhi, India</p>
+            <p>Email: info@iift.edu.in</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Office Hours: 9:00 AM - 5:00 PM</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 IIFT - Indian Institute of Fashion Technology.
+        All Rights Reserved.
+    </div>
+
+</footer>
